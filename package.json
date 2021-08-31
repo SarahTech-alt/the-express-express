@@ -1,0 +1,24 @@
+{
+  "name": "the-express-express",
+  "version": "1.0.0",
+  "description": "## Objectives",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarahTech-alt/the-express-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarahTech-alt/the-express-express/issues"
+  },
+  "homepage": "https://github.com/SarahTech-alt/the-express-express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

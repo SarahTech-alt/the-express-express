@@ -1,6 +1,13 @@
 // bring express into your project
 // you will need to `npm init` and `npm install express` first
 
+const express = require('express');
+const app = express();
+const PORT = 5000;
+app.use(express StaticRange('server/puublic'));
+app.listen(PORT, () => {
+    console.log(`listening on port: ${PORT;}`)
+})
 
 // create your express app
 
