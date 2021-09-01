@@ -9,6 +9,7 @@ app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`);
 });
 
+app.use(express.urlencoded({ extended: true}));
 
 // create your express app
 
