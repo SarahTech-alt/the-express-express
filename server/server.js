@@ -76,7 +76,7 @@ function randomNumber(min, max) {
 
 app.get('/random', (req,res) => {
     console.log('Radom route requested');
-    res.send(`Your random train is: ${trains[randomNumber(0, trains.length-1)].name}`)
+    res.send(`Your random train is: ${JSON.stringify(trains[randomNumber(0, trains.length-1)])}`)
     
 });
 // -------- BASE -----//
