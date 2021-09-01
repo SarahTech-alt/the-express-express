@@ -26,8 +26,8 @@ const trains = [
 // when a user visits localhost:5000/train
 // this route should return the array of trains
 
-app.get('train', (req, res) => {
-    console.log('request for trains was made');ß
+app.get('/trains', (req, res) => {
+    console.log('request for trains was made');
     res.send(trains);
 });
 
@@ -36,12 +36,21 @@ app.get('train', (req, res) => {
 // when a user visits localhost:5000/first-train
 // this route should return the first train in the array
 
+app.get('/first-train', (req,res) =>{
+    console.log('request was made for first train');
+    res.send(trains[0]);
+    console.log('first train was sent');
+});
 
 // Create your `/last-train` route here
 // when a user visits localhost:5000/last-train
 // this route should return the last train in the array
 
-
+app.get('/last-train', (req,res) =>{
+    console.log('request was made for last train');
+    res.send(trains[trains.length-1]);
+    console.log('last train was sent');
+});
 
 // -------- STRETCH -----//
 
