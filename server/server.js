@@ -69,13 +69,16 @@ app.get('/count', (req, res) => {
 // Create your `/random` route here
 // when a user visits localhost:5000/random
 // this route should return a single train at random
-ß
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (1 + max - min) + min);
+}
 
 app.get('/random', (req,res) => {
     console.log('Radom route requested');
-    res.send(`Your random train is: ${trains[trains[randomNumber(0, trains.length-1)]]}`)
+    res.send(`Your random train is: ${trains[randomNumber(0, trains.length-1)].name}`)
     
-});ß
+});
 // -------- BASE -----//
 
 // Don't forget to start your app by running `.listen()`
