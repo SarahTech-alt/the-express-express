@@ -5,10 +5,9 @@ const express = require('express');
 const app = express();
 const PORT = 5000;
 app.use(express.static('server/public'));
-app.listen(PORT, () => {
-    console.log(`listening on port: ${PORT}`);
-});
 
+
+// Process our POST informationß
 app.use(express.urlencoded({ extended: true}));
 
 // create your express app
@@ -81,5 +80,18 @@ app.get('/random', (req,res) => {
     
 });
 // -------- BASE -----//
+
+//---------POSTMAN------//
+
+app.post('/trains', (req, res) => {
+    console.log('in add trains', req.body);
+    trains.push(req.body);
+    res.send('success');
+});
+
+// This should always be last !!
+app.listen(PORT, () => {
+    console.log(`listening on port: ${PORT}`);
+});
 
 // Don't forget to start your app by running `.listen()`
