@@ -84,14 +84,17 @@ app.get('/random', (req,res) => {
 //---------POSTMAN------//
 
 app.post('/trains', (req, res) => {
+    // const theTrainToAdd = req.body
+    // trains.push(theTrainToAdd)
+    // Server side validation would happen here
     console.log('in add trains', req.body);
     trains.push(req.body);
     res.send('success');
 });
 
+
+// Don't forget to start your app by running `.listen()`
 // This should always be last !!
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`);
 });
-
-// Don't forget to start your app by running `.listen()`
