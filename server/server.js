@@ -26,6 +26,11 @@ const trains = [
 // when a user visits localhost:5000/train
 // this route should return the array of trains
 
+app.get('train', (req, res) => {
+    console.log('request for trains was made');ß
+    res.send(trains);
+});
+
 
 // Create your `/first-train` route here
 // when a user visits localhost:5000/first-train
