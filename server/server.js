@@ -46,7 +46,7 @@ app.get('/first-train', (req,res) =>{
 // when a user visits localhost:5000/last-train
 // this route should return the last train in the array
 
-app.get('/last-train', (req,res) =>{
+app.get('/last-train', (req,res) => {
     console.log('request was made for last train');
     res.send(trains[trains.length-1]);
     console.log('last train was sent');
@@ -60,12 +60,22 @@ app.get('/last-train', (req,res) =>{
 // NOTE: express doesn't like it when you return numbers
 // instead, return an object like { totalCount: 4 }
 
+app.get('/count', (req, res) => {
+    console.log('Train count requested');
+    res.send(`The number of trains: ${trains.length}.`)
+    console.log('Train count was sent');
+});
 
 // Create your `/random` route here
 // when a user visits localhost:5000/random
 // this route should return a single train at random
+ß
 
-
+app.get('/random', (req,res) => {
+    console.log('Radom route requested');
+    res.send(`Your random train is: ${trains[trains[randomNumber(0, trains.length-1)]]}`)
+    
+});ß
 // -------- BASE -----//
 
 // Don't forget to start your app by running `.listen()`
